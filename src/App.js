@@ -1,9 +1,22 @@
 import React from 'react';
+import TodoModel from './models/TodoModel';
+import TodoForm from './components.TodoForm';
+import TodoList from './components.TodoList';
 
 class App extends React.Component {
+
+  constructor() {
+    super();
+
+    this.todos = new TodoModel();
+  }
+
     render() {
         return (
-            <h1>Hello World!</h1>
+            <div className="todos-app">
+              <TodoForm model={this.todos} />
+              <TodoList model-{this.todos} />
+            </div>
         );
     }
 }
