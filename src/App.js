@@ -1,22 +1,24 @@
 import React from 'react';
-import TodoModel from './models/TodoModel';
-import TodoForm from './components/TodoForm';
-import TodoList from './components/TodoList';
+import { Link } from 'react-router';
+import Home from './components/Home';
+import GeneralChannel from './components/GeneralChannel';
+import StudyChannel from './components/StudyChannel';
+import BeerChannel from './components/BeerChannel';
 
 class App extends React.Component {
-
-  constructor() {
-    super();
-
-    this.todos = new TodoModel();
-  }
-
   render() {
         return (
-            <div className="todos-app">
-              <TodoForm model={this.todos} />
-              <TodoList model={this.todos} />
-            </div>
+          <div className="container">
+        <nav className="main">
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/generalchannel">General</Link></li>
+            <li><Link to="/studychannel">Studies</Link></li>
+            <li><Link to="/beerchannel">Beers</Link></li>
+          </ul>
+        </nav>
+        {this.props.children}
+      </div>
         );
     }
 }
