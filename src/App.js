@@ -15,7 +15,7 @@ class App extends React.Component {
         return (
             <div className="todos-app">
               <TodoForm model={this.todos} />
-
+              <TodoList model={this.todos} />
             </div>
         );
     }
