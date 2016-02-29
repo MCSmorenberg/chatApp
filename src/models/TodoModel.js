@@ -12,3 +12,5 @@ class TodoModel extends BaseModel {
     super('todo');
   }
 }
+
+export default TodoModel;

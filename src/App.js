@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoModel from './models/TodoModel';
-import TodoForm from './components.TodoForm';
-import TodoList from './components.TodoList';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 
 class App extends React.Component {
 
@@ -11,11 +11,11 @@ class App extends React.Component {
     this.todos = new TodoModel();
   }
 
-    render() {
+  render() {
         return (
             <div className="todos-app">
               <TodoForm model={this.todos} />
-              <TodoList model-{this.todos} />
+
             </div>
         );
     }
